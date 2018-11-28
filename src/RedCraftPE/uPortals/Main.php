@@ -3,6 +3,8 @@
 namespace RedCraftPE\uPortals;
 
 use pocketmine\plugin\PluginBase;
+use pocketmine\utils\Config;
+use pocketmine\utils\TextFormat;
 
 class Main extends PluginBase {
   
@@ -14,7 +16,7 @@ class Main extends PluginBase {
   
     self::$instance = $this;
   
-    $this->eventListener = new EventListener($this);
+    $this->eventListener = new PortalsListener($this);
   }
   public function onLoad(): void {
   
